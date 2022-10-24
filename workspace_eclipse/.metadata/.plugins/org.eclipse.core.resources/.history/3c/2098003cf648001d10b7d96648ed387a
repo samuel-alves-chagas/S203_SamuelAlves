@@ -1,0 +1,7 @@
+package strategy.frete;
+
+public class ServicoFreteSedex {
+	public double calcularValor(double pesoEmKg) {
+		
+	}
+}

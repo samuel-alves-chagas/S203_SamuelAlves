@@ -1,0 +1,14 @@
+package strategy.frete;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CalculadoraFreteTest {
+
+	@Test
+	public void testCalcularValor() {
+		fail("Not yet implemented");
+	}
+
+}

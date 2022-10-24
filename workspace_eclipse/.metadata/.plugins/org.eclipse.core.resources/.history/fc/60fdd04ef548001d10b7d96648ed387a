@@ -1,0 +1,27 @@
+package strategy.frete;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+public class CalculadoraFreteTest {
+
+	@SuppressWarnings("deprecation")
+	@Test
+	public void deveCalcularFreteParaDHL() {
+		CalculadoraFrete calculadora = new CalculadoraFrete();
+		double valorFrete = calculadora.calcularValor("dhl", 9);
+		double valorEsperado = 100.00;
+		
+		System.out.println(valorFrete);
+		System.out.println(valorEsperado);
+		try {
+			assertNotNull(calculadora);
+			assertEquals(valorFrete, valorEsperado);			
+		} catch(IllegalStateException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,7 @@
+package strategy.frete;
+
+public class ServicoFreteJadlog {
+	public double calcularValor(double pesoEmKg) {
+		
+	}
+}

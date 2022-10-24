@@ -1,0 +1,23 @@
+package state.artigo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Artigo {
+	
+	private String estado;
+	
+	private List<String> logHistorico = new ArrayList<>();
+	
+	public Artigo () {
+		this.estado = "RASCUNHO";
+	}
+	
+	public String getString() {
+		return estado;
+	}
+	
+	public List<String> getLogHistorico(){
+		return logHistorico;
+	}
+}

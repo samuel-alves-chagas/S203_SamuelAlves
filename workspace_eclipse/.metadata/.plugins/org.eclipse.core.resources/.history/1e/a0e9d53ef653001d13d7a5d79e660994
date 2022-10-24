@@ -1,0 +1,34 @@
+package state.artigo;
+
+import static org.junit.jupiter.api.Assertions;
+
+import static org.junit.Test;
+
+
+public class ArtigoTest {
+
+	@Test
+	public void deveArtigoTransitarRascunhoAteAprovado () {
+		GerenteDeSeguranca seguranca = GerenteDeSeguranca.getInstance();
+		
+		Artigo artigo = new Artigo();
+		
+		assertEquals("RASCUNHO", artigo.getEstado());
+		
+		
+		seguranca.setUsuarioCorrente("AUTOR");
+		artigo.publicar();
+		
+		assertEquals("REVISANDO", artigo.getEstado());
+		
+		
+		seguranca.setUsuarioCorrente("MODERADOR");
+		artigo.publicar();
+		
+		assertEquals("APROVADO", artigo.getEstado());
+		
+		artigo.getLogHistorico().forEach(System.out::println);
+		
+	}
+
+}

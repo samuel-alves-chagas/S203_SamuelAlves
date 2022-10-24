@@ -1,0 +1,10 @@
+package strategy.frete;
+
+import javax.management.RuntimeErrorException;
+
+public class CalculadoraFrete {
+	
+	public double calcularValor(String servico, double pesoEmKg) {
+		
+	}
+}

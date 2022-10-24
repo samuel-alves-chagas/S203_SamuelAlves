@@ -1,0 +1,18 @@
+package strategy.frete;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CalculadoraFreteTest {
+
+	@Test
+	public void deveCalcularFreteParaDHL() {
+		CalculadoraFrete calculadora = new CalculadoraFrete();
+		double valorFrete = calculadora.calcularValor("dhl", 9);
+		
+		assertNotNull(calculadora);
+		assertEquals(valorFrete, 50.0);
+	}
+
+}

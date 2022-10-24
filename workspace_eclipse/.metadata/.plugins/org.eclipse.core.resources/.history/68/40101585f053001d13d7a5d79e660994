@@ -1,0 +1,12 @@
+package state.artigo;
+
+public class Artigo {
+	
+	private String estado;
+	
+	private List<String> logHistorico = new ArrayList<>();
+	
+	public Artigo () {
+		this.estado = "RASCUNHO";
+	}
+}
