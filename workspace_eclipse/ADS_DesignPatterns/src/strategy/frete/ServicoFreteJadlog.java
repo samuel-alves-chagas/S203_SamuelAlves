@@ -1,7 +1,7 @@
 package strategy.frete;
 
 public class ServicoFreteJadlog implements Fretavel {
-	
+
 	@Override
 	public double calcularValor(double pesoEmKg) {
 
