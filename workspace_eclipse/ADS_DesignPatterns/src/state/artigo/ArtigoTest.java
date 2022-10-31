@@ -13,22 +13,18 @@ public class ArtigoTest {
 		
 		Artigo artigo = new Artigo();
 		
-		assertEquals("RASCUNHO", artigo.getEstado());
-		
-		
+		// 1. Rascunho -> Revisando
 		seguranca.setUsuarioCorrente("AUTOR");
 		artigo.publicar();
 		
-		assertEquals("REVISANDO", artigo.getEstado());
+		
+		assertTrue(artigo.getEstado() instanceof EstadoRevisando);
 		
 		
 		seguranca.setUsuarioCorrente("MODERADOR");
-		artigo.publicar();
+		artigo.reprovar();
 		
-		assertEquals("APROVADO", artigo.getEstado());
-		
-		artigo.getLogHistorico().forEach(System.out::println);
-		
+		assertTrue(artigo.getEstado() instanceof EstadoRascunho);
 	}
 
 }
